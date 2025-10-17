@@ -10,6 +10,7 @@ import SwiftUI
 struct FrameworkDetailView: View {
     
     var framework: Framework
+    
     @Binding var isShowingDetailView: Bool
     
     var body: some View {
@@ -37,9 +38,7 @@ struct FrameworkDetailView: View {
             
             Spacer()
             
-            Button{
-                
-            }label: {
+            Link(destination: URL(string: framework.urlString)!){
                 AFButton(title: "Learn More")
             }
         }
